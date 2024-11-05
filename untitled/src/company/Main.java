@@ -10,6 +10,10 @@ public class Main {
         Engineer Tim = new Engineer("Tim", "Engineer", 91000, new String[] {"Servers","Network configuration"} );
         SalesPerson Lee = new SalesPerson("Lee", "Sales", 10000, 3940 );
 
+        //Adding new skill to Tim
+        Tim.setSkills("People's skill");
+
+        //Print all employee summaries
         System.out.println(emily);
         System.out.println(john);
         System.out.println(dave);
@@ -25,8 +29,12 @@ public class Main {
         Tim.setSalary(Tim.getSalary()+1000);
         Lee.setSalary(Lee.getSalary()+1000);
 
-        System.out.println("\nAfter Salary Raise:");
+        //Remove People skills from Tim since he lied about it in resume
+        Tim.removeSkill("People's skill");
 
+
+        //Print after salary raise
+        System.out.println("\nAfter Salary Raise:");
         System.out.println(emily);
         System.out.println(john);
         System.out.println(dave);
@@ -51,7 +59,7 @@ public class Main {
         System.out.println(Tim);
         System.out.println(Lee);
 
-        //Everyone decided to migrate to a new department called kuwait
+        //Everyone decided to migrate to a new department called kuwait, not to be confused with the country
         emily.setDept("Kuwait");
         john.setDept("Kuwait");
         dave.setDept("Kuwait");
